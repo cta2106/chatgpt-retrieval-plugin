@@ -98,7 +98,7 @@ class PineconeDataStore(DataStore):
         for batch in batches:
             try:
                 print(f"Upserting batch of size {len(batch)}")
-                self.index.upsert(vectors=batch, namespace="central-banks")
+                self.index.upsert(vectors=batch)
                 print(f"Upserted batch successfully")
             except Exception as e:
                 print(f"Error upserting batch: {e}")
